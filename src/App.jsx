@@ -1,4 +1,6 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+
 import Header from "./components/header";
 import Hero from "./components/hero";
 import Projects from "./components/projects";
@@ -8,18 +10,35 @@ import FeaturedArticle from "./components/featuredarticle";
 import FeatureTutorial from "./components/featuretutorial";
 import Footer from "./components/footer";
 
-function App() {
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
+function Home() {
   return (
     <>
-      <Header />
       <Hero />
       <Projects />
       <PhotoGallery />
       <FeaturedArticle />
       <FeatureTutorial />
       <Subscribe />
-      <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+
+      <Footer />
+    </BrowserRouter>
   );
 }
 

@@ -333,3 +333,146 @@ footer {
     }
 }  
 
+/* Navigation bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 25px;
+  background-color: #f2f2f2;
+}
+
+/* DEV@Deakin logo */
+.logo {
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Search field */
+.search {
+  flex: 1;
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Post and Login buttons */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-buttons button,
+.login-link {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-buttons button:hover,
+.login-link:hover {
+  background-color: #d0d0d0;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+
+  .search {
+    min-width: 120px;
+  }
+}
+
+/* Login and Signup Pages */
+
+.auth-container {
+  width: 90%;
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+/* Arrange form fields vertically */
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-container label {
+  display: block;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Form buttons */
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #3979f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background-color: #2864d8;
+}
+
+/* Sign-up link */
+.auth-container p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.auth-container a {
+  color: #3979f6;
+  text-decoration: none;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive layout */
+@media (max-width: 500px) {
+  .auth-container {
+    width: 95%;
+    padding: 20px;
+    margin: 25px auto;
+  }
+}
+
