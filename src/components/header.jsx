@@ -58,7 +58,12 @@ function Header() {
       </form>
 
       <div className="nav-buttons">
-        <button type="button">Post</button>
+        <button
+          type="button"
+          onClick={() => navigate("/post")}
+        >
+          Post
+        </button>
 
         <Link to="/login" className="login-link">
           Login
