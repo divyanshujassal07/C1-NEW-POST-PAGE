@@ -41,11 +41,22 @@ function Signup() {
       await setDoc(doc(db, "users", user.uid), {
         name: name,
         email: email,
+        plan: "Free",
       });
 
       navigate("/login");
     } catch (error) {
-      setError(error.message);
+      if (error.code === "auth/email-already-in-use") {
+        setError("This email is already registered. Please log in.");
+      } else if (error.code === "permission-denied") {
+        setError("Unable to save your profile. Please check Firestore permissions.");
+      } else if (error.code === "auth/weak-password") {
+        setError("Password must be at least 6 characters long.");
+      } else if (error.code === "auth/invalid-email") {
+        setError("Please enter a valid email address.");
+      } else {
+        setError(error.message);
+      }
     }
   };
 
@@ -104,3 +115,4 @@ function Signup() {
 }
 
 export default Signup;
+

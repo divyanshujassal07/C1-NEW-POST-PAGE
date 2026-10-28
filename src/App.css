@@ -508,6 +508,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  
 }
 
 .new-post-container label {
@@ -553,6 +554,8 @@ footer {
 
 .new-post-container button[type="submit"]:hover {
   background-color: #333333;
+  margin: 0%;
+  margin-right: auto;
 }
 
 /* Mobile layout */
